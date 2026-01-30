@@ -1,0 +1,443 @@
+/* RESET */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+
+
+body{
+  background: #ffffff;
+  color: #111;
+  font-family: 'Great Vibes', cursive;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* PAGE 1 */
+#page1 {
+  background-color: #f7f1dc; /* soft cream */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#page1 h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 40px;
+  color: #7a4a2e;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #7a4a2e;
+  width: 0;
+  animation:
+    typing 3s steps(30, end) forwards,
+    blink 0.7s infinite,
+    slideCenter 1.5s ease forwards;
+  animation-delay: 0s, 0s, 3s;
+  position: relative;
+  left: -100%;
+}
+
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+@keyframes slideCenter {
+  to {
+    left: 0;
+    border-right: none;
+  }
+}
+
+
+/* PAGE 2 */
+#page2{
+  min-height: 100vh;
+  background: #fadadd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.boxPage{
+  height: 300px;
+  width: 300;
+  border: 2px solid black;
+  border-radius:50px;
+  background-color:black;
+  opacity: 0.8;
+  color: white;
+}
+
+audio{
+   position: relative;
+   top: 70px;
+}
+
+.page02H{
+  position: relative;
+   top: 20px;
+}
+
+.page02Paragha{
+  position: relative;
+  top: 100px;
+}
+
+#page2 h2{
+  font-size: 28px;
+}
+
+#page2 p{
+  max-width: 500px;
+  font-size: 16px;
+  color: #374151;
+}
+
+/* CARDS */
+.cards-section{
+  padding: 60px 20px;
+  background: #f9fafb;
+}
+
+.card-row{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.card{
+  /* width: 32%; */
+  height: 300px;
+  width: 300px;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  transition: transform 0.3s;
+}
+
+.card img{
+  width: 100%;
+  display: block;
+}
+
+.card:hover{
+  transform: translateY(-6px);
+}
+
+.hover-text{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.85);
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.card:hover .hover-text{
+  opacity: 1;
+}
+
+.like{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.like.liked{
+  color: #e11d48;
+  transform: scale(1.2);
+}
+
+/* ANIMATIONS */
+@keyframes slideIn{
+  from{
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes beat{
+  0%,100%{ transform: scale(1); }
+  50%{ transform: scale(1.2); }
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px){
+  .card{
+    width: 48%;
+  }
+}
+
+@media(max-width: 600px){
+  .card{
+    width: 100%;
+  }
+
+  #content{
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+
+.box{
+  height: 300px;
+  width: 300px;
+  border-radius: 1rem;
+
+}
+
+.box1{
+    background: url("./asset/1.jpg");
+    background-size: cover;
+    background-position-y: -120px;
+}
+
+.box2{
+  background: url("./asset/2.jpg");
+   background-size: cover;
+   background-position-y: -120px;
+}
+
+
+.box3{
+  background: url("./asset/3.jpg");
+   background-size: cover;
+   background-position-y: -240px;
+}
+
+
+.box4{
+  background: url("./asset/4.jpg");
+   background-size: cover;
+   background-position-x: -100px;
+}
+
+.box5{
+  background: url("./asset/6.jpg");
+   background-size: cover;
+   background-position-y: -140px;
+}
+
+.box6{
+  background: url("./asset/7.jpg");
+   background-size: cover;
+   background-position-y: -170px;
+}
+
+
+
+.box {
+  opacity: 0;
+  transform: scale(0.6);
+  transition: all 0.6s ease-out;
+}
+
+.box.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+.img3wala{
+  height: 500px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boximg3{
+  height: 400px;
+  width: 50px;
+  border-radius: 1rem;
+}
+
+
+/* img3 */
+
+.boximg3_1{
+  background: url("./asset/11.jpg");
+  background-size: cover;
+  background-position-y:-60px;
+  animation: width 5s linear 1s infinite;
+}
+
+.boximg3_2{
+  background: url("./asset/12...jpeg");
+   background-size: cover;
+   background-position-y:-80px;
+   animation: width 5s linear 1s infinite;
+}
+
+@keyframes width {
+    100%{
+        width: 400px;
+    }
+}
+
+
+.leater{
+  margin-top: 200px;
+  height: 700px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* letter */
+
+
+
+
+.love-card {
+  background-color: #ffd6e5; /* baby pink */
+  padding: 50px;
+  max-width: 700px;
+  border-radius: 150px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  font-family: "Georgia", "Times New Roman", serif;
+  color: #4a2c35;
+  line-height: 1.8;
+}
+
+/* Heading styling */
+.love-card h2 {
+  text-align: center;
+  margin-bottom: 18px;
+  font-size: 26px;
+  color: #c2185b;
+  position: relative;
+}
+
+/* Heart emoji before and after heading */
+.love-card h2::before {
+  content: "💖 ";
+}
+
+.love-card h2::after {
+  content: " 💖";
+}
+
+/* Paragraph text */
+.love-card p {
+  font-size: 16px;
+  text-align: left;
+}
+
+/* Adding a cute emoji at the start of the letter */
+.love-card p::before {
+  content: "💌 ";
+}
+
+/* Signature styling */
+.love-card .signature {
+  display: block;
+  margin-top: 24px;
+  text-align: right;
+  font-style: italic;
+  font-size: 15px;
+  color: #ad1457;
+}
+
+/* Emoji after signature */
+.love-card .signature::after {
+  content: " 🌸";
+}
+
+/* for font styling */
+
+/* Main romantic heading */
+h1, h2 {
+  font-family: 'Great Vibes', cursive;
+  color: #ff2f6e;
+  letter-spacing: 2px;
+}
+
+/* Countdown & ready text */
+#readyText, #countdown {
+  font-family: 'Pacifico', cursive;
+  color: #ff4d6d;
+  font-size: 2rem;
+  position: relative;
+  top:-100px;
+}
+
+/* Love You 3000 text */
+.love {
+  font-family: 'Dancing Script', cursive;
+  font-size: 28px;
+  color: #ff1e56;
+}
+
+/* Page 2 heading */
+.page02H {
+  font-family: 'Pacifico', cursive;
+  font-size: 32px;
+}
+
+/* Romantic paragraphs */
+.page02Paragha,
+.love-card p {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* Letter title */
+.love-card h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 36px;
+  color: #ff3366;
+}
+
+/* Signature */
+.signature {
+  font-family: 'Dancing Script', cursive;
+  font-size: 22px;
+  color: #ff4d6d;
+}
+
+
+
+
+
+
+
+
